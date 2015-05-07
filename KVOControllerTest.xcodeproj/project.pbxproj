@@ -15,6 +15,8 @@
 		210294C61AF9FD5800CAF9CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 210294C51AF9FD5800CAF9CE /* Images.xcassets */; };
 		210294C91AF9FD5800CAF9CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 210294C71AF9FD5800CAF9CE /* LaunchScreen.xib */; };
 		210294D51AF9FD5800CAF9CE /* KVOControllerTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 210294D41AF9FD5800CAF9CE /* KVOControllerTestTests.m */; };
+		210294E01AFA019F00CAF9CE /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 210294DF1AFA019F00CAF9CE /* DataModel.m */; };
+		C83185ACE612C8B8AA25EE9E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B02D5105DC5206E73BF38A39 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,11 @@
 		210294CE1AF9FD5800CAF9CE /* KVOControllerTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KVOControllerTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		210294D31AF9FD5800CAF9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		210294D41AF9FD5800CAF9CE /* KVOControllerTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOControllerTestTests.m; sourceTree = "<group>"; };
+		210294DE1AFA019F00CAF9CE /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		210294DF1AFA019F00CAF9CE /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		9776296F974B36C24196B843 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B02D5105DC5206E73BF38A39 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9CA308F09337D3C88026362 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83185ACE612C8B8AA25EE9E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +76,8 @@
 				210294B41AF9FD5800CAF9CE /* KVOControllerTest */,
 				210294D11AF9FD5800CAF9CE /* KVOControllerTestTests */,
 				210294B31AF9FD5800CAF9CE /* Products */,
+				EC9007DF1103989C234E5694 /* Pods */,
+				791D900030544DCA6E2D9DD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +97,8 @@
 				210294BA1AF9FD5800CAF9CE /* AppDelegate.m */,
 				210294BF1AF9FD5800CAF9CE /* ViewController.h */,
 				210294C01AF9FD5800CAF9CE /* ViewController.m */,
+				210294DE1AFA019F00CAF9CE /* DataModel.h */,
+				210294DF1AFA019F00CAF9CE /* DataModel.m */,
 				210294C21AF9FD5800CAF9CE /* Main.storyboard */,
 				210294C51AF9FD5800CAF9CE /* Images.xcassets */,
 				210294C71AF9FD5800CAF9CE /* LaunchScreen.xib */,
@@ -122,6 +134,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		791D900030544DCA6E2D9DD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B02D5105DC5206E73BF38A39 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC9007DF1103989C234E5694 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9776296F974B36C24196B843 /* Pods.debug.xcconfig */,
+				C9CA308F09337D3C88026362 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 210294D81AF9FD5800CAF9CE /* Build configuration list for PBXNativeTarget "KVOControllerTest" */;
 			buildPhases = (
+				5F56DAD7ECD9F0A87F0E30B3 /* Check Pods Manifest.lock */,
 				210294AE1AF9FD5800CAF9CE /* Sources */,
 				210294AF1AF9FD5800CAF9CE /* Frameworks */,
 				210294B01AF9FD5800CAF9CE /* Resources */,
+				584D749F5202FC74111431FD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +248,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		584D749F5202FC74111431FD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F56DAD7ECD9F0A87F0E30B3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		210294AE1AF9FD5800CAF9CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -225,6 +289,7 @@
 				210294BE1AF9FD5800CAF9CE /* KVOControllerTest.xcdatamodeld in Sources */,
 				210294BB1AF9FD5800CAF9CE /* AppDelegate.m in Sources */,
 				210294C11AF9FD5800CAF9CE /* ViewController.m in Sources */,
+				210294E01AFA019F00CAF9CE /* DataModel.m in Sources */,
 				210294B81AF9FD5800CAF9CE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +414,7 @@
 		};
 		210294D91AF9FD5800CAF9CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9776296F974B36C24196B843 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KVOControllerTest/Info.plist;
@@ -359,6 +425,7 @@
 		};
 		210294DA1AF9FD5800CAF9CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9CA308F09337D3C88026362 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KVOControllerTest/Info.plist;
@@ -420,6 +487,7 @@
 				210294DA1AF9FD5800CAF9CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		210294DB1AF9FD5800CAF9CE /* Build configuration list for PBXNativeTarget "KVOControllerTestTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +496,7 @@
 				210294DD1AF9FD5800CAF9CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
